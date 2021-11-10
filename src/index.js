@@ -315,6 +315,8 @@ SmoothPinCodeInput.propTypes = {
   onBlur: PropTypes.func,
   keyboardType: PropTypes.string,
   editable: PropTypes.bool,
+  caretHidden: PropTypes.bool,
+  autoCapitalize: PropTypes.string,
   inputProps: PropTypes.exact(TextInput.propTypes),
 };
 
