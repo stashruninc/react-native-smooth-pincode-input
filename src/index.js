@@ -136,6 +136,8 @@ class SmoothPinCodeInput extends Component {
       editable,
       inputProps,
       disableFullscreenUI,
+      caretHidden,
+      autoCapitalize,
     } = this.props;
     const { maskDelay, focused } = this.state;
     return (
@@ -222,7 +224,8 @@ class SmoothPinCodeInput extends Component {
           autoFocus={autoFocus}
           keyboardType={keyboardType}
           numberOfLines={1}
-          caretHidden
+          caretHidden={caretHidden}
+          autoCapitalize={autoCapitalize}
           maxLength={codeLength}
           selection={{
             start: value.length,
@@ -260,6 +263,8 @@ class SmoothPinCodeInput extends Component {
     animationFocused: 'pulse',
     animated: true,
     editable: true,
+    caretHidden: true,
+    autoCapitalize: 'none',
     inputProps: {},
     disableFullscreenUI: true,
   };
